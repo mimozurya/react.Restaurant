@@ -1,0 +1,157 @@
+body {
+    background: linear-gradient(180deg, rgba(244, 100, 100, 0.74) 0%, rgba(248, 98, 98, 0) 100%);
+    font-family: "Inter", sans-serif;
+}
+
+.display {
+    width: 1080px;
+    height: 1526px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.04);
+    margin-top: 85px;
+}
+
+header {
+    padding: 43px 64px 44px 41px;
+    border-bottom: 1px solid #eaeaea;
+    .headerLeft {
+        img {
+            margin-right: 16px;
+        }
+        .headerLeftTitle {
+            h1 {
+                margin: 0;
+                color: #000;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                text-transform: uppercase;
+            }
+            p {
+                margin: 0;
+                color: #9d9d9d;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+    }
+    .headerRight {
+        p {
+            color: #5c5c5c;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        .cart {
+            margin-right: 32px;
+            img {
+                margin-right: 10px;
+            }
+            p {
+                font-weight: 600;
+            }
+        }
+        .user {
+            img {
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+section {
+    margin: 44px 48px 115px 72px;
+    .filterHeading {
+        margin-bottom: 37px;
+        h2 {
+            margin: 0;
+            color: #000;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-right: 35px;
+        }
+        input,
+        select {
+            color: #c4c4c4;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            border: 0;
+            outline: none;
+        }
+        .filter {
+            width: 250px;
+            height: 45px;
+            border-radius: 10px;
+            border: 1px solid #f3f3f3;
+            select {
+                margin-left: 24px;
+            }
+        }
+        .search {
+            width: 250px;
+            height: 45px;
+            border-radius: 10px;
+            border: 1px solid #f3f3f3;
+            img {
+                margin: 0 12px 0 22px;
+            }
+        }
+    }
+}
+.cards {
+    gap: 30px;
+}
+
+.card {
+    border-radius: 40px;
+    border: 1px solid #f3f3f3;
+    background: #fff;
+    width: 210px;
+    height: 260px;
+    #food {
+        margin-top: 30px;
+        margin-bottom: 16px;
+    }
+    p {
+        margin: 0 29px 14px 31px;
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .cardFooter {
+        margin-left: 30px;
+        margin-right: 29px;
+        .cardPrice {
+            margin-right: 58px;
+            h4 {
+                margin: 0;
+                color: #bdbdbd;
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                text-transform: uppercase;
+                margin-bottom: 2px;
+            }
+            b {
+                color: #000;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+    }
+}
