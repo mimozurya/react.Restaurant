@@ -1,0 +1,114 @@
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-out, visibility 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.overlayVisible {
+    visibility: visible;
+    opacity: 1;
+    .drawer {
+        transform: translateX(0);
+    }
+}
+
+.drawer {
+    position: absolute;
+    width: 420px;
+    height: 100%;
+    right: 0;
+    background: #ffffff;
+    box-shadow: -10px 4px 24px rbga(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 30px;
+    .drawerHeader {
+        margin-bottom: 30px;
+        h2 {
+            margin: 0;
+            color: #000;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+    .drawerCard {
+        border-radius: 20px;
+        border: 1px solid #f3f3f3;
+        background: #fff;
+        margin-bottom: 30px;
+        flex: 1;
+        #drawerFood {
+            margin: 20px;
+        }
+        .drawerCardText {
+            margin-right: 12px;
+            p {
+                margin: 0;
+                color: #000;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin-bottom: 5px;
+            }
+            span {
+                color: #000;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+        #btnClose {
+            margin-right: 20px;
+            margin-top: 40px;
+        }
+    }
+    .drawerFooter {
+        p {
+            color: #000;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin: 0;
+        }
+        span {
+            color: #000;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        .drawerFooterTotal {
+            margin-bottom: 15px;
+        }
+        .drawerFooterTax {
+            margin-bottom: 24px;
+        }
+        button {
+            border-radius: 18px;
+            background: #9dd458;
+            width: 325px;
+            height: 55px;
+            border: 0;
+            color: #fff;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-left: 40px;
+        }
+    }
+}

@@ -1,4 +1,7 @@
-function Header() {
+import { useContext } from "react";
+import AppContext from "../context";
+
+function Header({ setOpenDrawer }) {
     return (
         <header className="d-flex align-center justify-between">
             <div className="headerLeft d-flex align-center">
@@ -9,7 +12,7 @@ function Header() {
                 </div>
             </div>
             <div className="headerRight d-flex align-center">
-                <div className="cart d-flex align-center">
+                <div className="cart d-flex align-center cu-p" onClick={() => setOpenDrawer(true)}>
                     <img src="./src/assets/icon-cart.svg" alt="cart" />
                     <p>1205 руб.</p>
                 </div>
