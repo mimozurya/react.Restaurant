@@ -1,12 +1,17 @@
 import { useContext } from "react";
 import AppContext from "../context";
 
+import Main from "../pages/Main";
+
 function Header({ setOpenDrawer }) {
     return (
         <header className="d-flex align-center justify-between">
-            <div className="headerLeft d-flex align-center">
+            <div className="headerLeft d-flex align-center cu-p">
                 <img src="./src/assets/icon-logotype.svg" alt="logotype" />
-                <div className="headerLeftTitle d-flex flex-column align-start">
+                <div
+                    className="headerLeftTitle d-flex flex-column align-start"
+                    onClick={() => <Main />}
+                >
                     <h1>React Restaurant</h1>
                     <p>Лучший ресторан для твоей берлоги</p>
                 </div>
