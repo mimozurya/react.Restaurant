@@ -3,15 +3,15 @@ import AppContext from "../context";
 
 import Card from "../components/Card";
 
-function Main({ searchValue, onChangeSearchInput }) {
-    const { items, isLoading } = useContext(AppContext);
+function Main({ searchValue, onChangeSearchInput, setSearchValue }) {
+    const { items, isLoading, onAddToCart } = useContext(AppContext);
 
     const renderItems = () => {
         const filtredItems = items.filter((item) =>
             item.text.toLowerCase().includes(searchValue.toLowerCase())
         );
         return (isLoading ? [...Array(16)] : filtredItems).map((item, index) => (
-            <Card key={index} {...item} />
+            <Card key={index} onPlus={(obj) => onAddToCart(obj)} {...item} />
         ));
     };
 

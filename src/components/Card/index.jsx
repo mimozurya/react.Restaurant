@@ -3,8 +3,14 @@ import AppContext from "../../context";
 import ContentLoader from "react-content-loader";
 import styles from "./Card.module.scss";
 
-function Card({ id, text, url, price, width, height }) {
-    const { isLoading } = useContext(AppContext);
+function Card({ id, text, url, price, width, height, onPlus }) {
+    const { isLoading, isItemAdded } = useContext(AppContext);
+
+    const obj = { id, parentId: id, text, url, width, height, price };
+
+    const onClickPlus = () => {
+        onPlus(obj);
+    };
 
     return (
         <div className={`${styles.card} d-flex flex-column align-center`}>
@@ -31,7 +37,18 @@ function Card({ id, text, url, price, width, height }) {
                             <h4>Цена:</h4>
                             <b>{price} руб.</b>
                         </div>
-                        <img src="./src/assets/btn-plus.svg" alt="btnPlus" className="cu-p" />
+                        {onPlus && (
+                            <img
+                                src={
+                                    isItemAdded(id)
+                                        ? "./src/assets/btn-ready.svg"
+                                        : "./src/assets/btn-plus.svg"
+                                }
+                                alt="btnPlus"
+                                className="cu-p"
+                                onClick={onClickPlus}
+                            />
+                        )}
                     </div>
                 </>
             )}
