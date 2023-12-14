@@ -30,7 +30,7 @@ function Card({ id, text, url, price, width, height, onPlus }) {
                 </ContentLoader>
             ) : (
                 <>
-                    <img src={url} alt="food" width={width} height={height} id={styles.food} />
+                    <img src={url} width={width} height={height} id={styles.food} />
                     <p>{text}</p>
                     <div className={`${styles.cardFooter} d-flex align-center justify-between`}>
                         <div className={`${styles.cardPrice} d-flex align-start flex-column`}>

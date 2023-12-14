@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Route, Routes, Link, Navigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import AppContext from "./context";
 import Header from "./components/Header";
@@ -97,6 +97,7 @@ function App() {
                 setCartItems,
                 isItemAdded,
                 onAddToCart,
+                setOpenDrawer,
             }}
         >
             <div className="d-flex flex-column align-center">

@@ -3,7 +3,7 @@ import AppContext from "../context";
 
 import Card from "../components/Card";
 
-function Main({ searchValue, onChangeSearchInput, setSearchValue }) {
+function Main({ searchValue, onChangeSearchInput }) {
     const { items, isLoading, onAddToCart } = useContext(AppContext);
 
     const renderItems = () => {
@@ -19,7 +19,8 @@ function Main({ searchValue, onChangeSearchInput, setSearchValue }) {
         <section>
             <div className="filterHeading d-flex align-center justify-between">
                 <h2>Все ресторанные блюда</h2>
-                <div className="filter d-flex align-center justify-between">
+
+                {/* <div className="filter d-flex align-center justify-between">
                     <select name="food">
                         <option value="">Выберите нужную категорию</option>
                         <option value="meat">Мясо</option>
@@ -28,7 +29,8 @@ function Main({ searchValue, onChangeSearchInput, setSearchValue }) {
                         <option value="burger">Бургеры</option>
                         <option value="pizza">Пиццы</option>
                     </select>
-                </div>
+                </div> */}
+
                 <div className="search d-flex align-center">
                     <img src="./src/assets/icon-search.svg" alt="search" />
                     <input

@@ -1,5 +1,4 @@
-import { useContext, useState } from "react";
-import AppContext from "../../context";
+import { useState } from "react";
 import styles from "./Drawer.module.scss";
 import { UseCart } from "../../hooks/useCart";
 import axios from "axios";
