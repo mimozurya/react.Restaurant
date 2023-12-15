@@ -24,10 +24,15 @@ function Orders() {
         <div className="content p-40">
             <div className="d-flex align-center justify-between mb-40">
                 <h1>Мои заказы</h1>
+                {/* {console.log(orders)} */}
             </div>
             <div className="d-flex flex-wrap">
                 {(isLoading ? [...Array(8)] : orders).map((item, index) => (
-                    <Card key={index} loading={isLoading} {...item} />
+                    <div>
+                        {/* <h2>Заказ № {item.id}</h2>
+                        {console.log(item.id)} */}
+                        <Card key={index} loading={isLoading} {...item} />
+                    </div>
                 ))}
             </div>
         </div>
